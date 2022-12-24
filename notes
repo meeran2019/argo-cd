@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------------------------------------
+GitOps Introduction:
+---------------------------------------------------------------------------------------------------------
+
+GitOps:
+    It is consider as an extension of infrastructure as code that uses Git as the version control system.
+    GitOps operator is running in server(ex: kubernetes cluster), it pulls manifest from git repository. 
+    Gitops operator compares the desired vs actual code.
+
+GitOps Principles:
+    1. Declarative vs Imperative -> Recommends declarative.
+    2. Make use of Git. 
+    3. GitOps operator (Software agent) runs in server.
+    4. Reconcillation -> Actual state vs Desired state.
+
+DevOps vs GitOps:
+    Gitops is generally used in openshift/kubernetes.
+    Devops is generally used for any application.
+
+    Devops (changes pushed to server) => git -> CI (publish image to container) -> CD (kubectl apply)
+    GitOps (changes pulled by git operator) => git -> CI (publish image to container) -> CD (pulls latest manifest)
+
+Push vs Pull based deployment:
+    
