@@ -21,4 +21,76 @@ DevOps vs GitOps:
     GitOps (changes pulled by git operator) => git -> CI (publish image to container) -> CD (pulls latest manifest)
 
 Push vs Pull based deployment:
+    Push based:
+        All credentials to maintain in CI.
+        Require RW access to k8s cluster.
+    Pull based:
+        Git operator run within cluster.
+        CI/CD is integrated in server and not exposed.
+
+GitOps Features:
+    GitOps operator support multi cluster deployment.
+    It eliminate configuration drift (team manually update in cluster)
+    It doesnot help with secret management.
+    It doesnot work well with multiple updates simultaneously as this works based on pull approach.
+
+GitOps Tools:
+    Gitops controller - Argo CD
+    JenkinsX
+    Helm Operator
+
+---------------------------------------------------------------------------------------------------------
+Argo CD Basics:
+---------------------------------------------------------------------------------------------------------
+
+Argo CD Introduction:
+    It is declarative, Gitops continuos delivery tool for kubernets resources defined in git repository.
+    It follows gitops patterns.
+
+Terminology:
+    Application             :   Group of kubernetes resources as defined by manifest file.
+    Application Source Type :   Tool used to build application (Ex: Helm, Kustomize etc)
+    Project                 :   Group of applications.
+
+    Target state            :   Desired state as maintain in git.
+    Live state              :   current live state of application.
+
+    Synch Status            :   Whether or not live state matches target state.
+    Sync                    :   Process of making target state as same as desired state.
+    Sync operation status   :   Synch operation succeeded or not. 
+
+    Refresh                 :   It takes latest code and compare live state and can initiate auto sync.
+    Health                  :   Health of application.
+
+Features:
+    Automated deploy of appln to multiple clusters.
+    Audit trials for appln events and API calls.
+    SSO Integration.
+    Webhook integration.
+    Rollback 
+    webUI 
+    Automated drift detection.
+    Provide prometheus metrics and grafana.
+    Support multiple source type like helm etc.
+    Support pre sync, sync, post sync hooks to support complex deployment.
+    Multi tenancy and RBAC support.
+    Support CLI and access token.
+    Health status analyses.
+    Automated or manual sync.
+
+Architecture:
+    It installed within cluster.
+    Pull based so checks any changes in desired state.
+    It also exposes API so can trigger by using jenkins, git webhook.
+
+Installation:
+    Core
+    Multi tenant:
+        Non high availability - install.yaml & namespace-install.yaml
+        high availability - ha/install.yaml & ha/namespace-install.yaml
+
+    https://argo-cd.readthedocs.io/en/stable/getting_started/
+
+    
+
     
