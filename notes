@@ -148,6 +148,7 @@ Application Health Check:
 Sync Strategy Types:
     It consists of manual and automatic sync.
     Auto pruning of resources - What happens when files are deleted or removed from git.
-    Self heal of cluster - What argocd does when make kubectl edit changes directly to cluster. 
+    Self heal of cluster - What argocd does when make kubectl changes directly to cluster. 
     
+
 
