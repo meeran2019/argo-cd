@@ -121,7 +121,33 @@ Reconcillation Loop:
     Based on configmap value ARGOCD_RECONCILIATION_TIMEOUT
     Used in argocd-repo-server 
 
+Update in configmap in seconds:
+    apiVersion: v1
+    data:
+    timeout.reconciliation: 60s
+    kind: ConfigMap
+    metadata:
+
 Git Webhook:
     Github -> send events to argo server -> argo repo server (which pulls)
+    Github -> Settings -> Web hooks -> Add webhook ->  argo-url/api/webhook
+    e.g. https://argocd.example.com/api/webhook
+    Content type - application/json 
 
-    Github -> Settings -> Web hooks -> Add webhook -> 
+Application Health Check:
+    Healthy -   All resources are 100% healthy.
+    Progressing -   Resource is unhealthy but still be healthy in given time.
+    Degraded -  Resource states indicate failure or inability to reach an healthy state.
+    Missing - Resource is not present in cluster.
+    Suspended - Resource is suspended or paused.
+    Unknown - Health status is not known.
+
+    Depends upon resources, does health check using Lua.
+    Supports custom health check.
+
+Sync Strategy Types:
+    It consists of manual and automatic sync.
+    Auto pruning of resources - What happens when files are deleted or removed from git.
+    Self heal of cluster - What argocd does when make kubectl edit changes directly to cluster. 
+    
+
