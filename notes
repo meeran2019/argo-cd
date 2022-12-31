@@ -96,9 +96,23 @@ Application:
     It consists of project, source, destination and synch details.
     This can be created in CLI, YAML & UI.
 
+UI: 
+    Application -> Select source, destination.
+
+CLI: 
+    argocd app create app-name     
+
 Settings:
     Useful to manage project repositories and configuration.
     Repository details are stored as secret in kubernetes cluster.
-        
 
+Project:
+    Can create multiple projects and assign to repository, application etc.
+    Roles are added to projects.
+
+
+---------------------------------------------------------------------------------------------------------
+ArgoCD Intermediate:
+---------------------------------------------------------------------------------------------------------
+    
     

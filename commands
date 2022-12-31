@@ -1,2 +1,5 @@
 kubectl get secret argocd-initial-admin-secret -n argocd -o json | jq -r ".data.password" | base64 --decode     To get initial password.
 
+argocd app create app-name  --source --dest             -> Create an application.
+argocd app list app-name                                -> List an application.
+argocd app sync app-name                                -> Synchronize application.
