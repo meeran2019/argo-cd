@@ -98,6 +98,7 @@ Application:
 
 Settings:
     Useful to manage project repositories and configuration.
-    
+    Repository details are stored as secret in kubernetes cluster.
+        
 
     
