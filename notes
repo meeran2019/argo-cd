@@ -124,4 +124,4 @@ Reconcillation Loop:
 Git Webhook:
     Github -> send events to argo server -> argo repo server (which pulls)
 
-    
+    Github -> Settings -> Web hooks -> Add webhook -> 
