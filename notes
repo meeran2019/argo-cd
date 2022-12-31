@@ -91,6 +91,13 @@ Installation:
 
     https://argo-cd.readthedocs.io/en/stable/getting_started/
 
+
+Application:
+    It consists of project, source, destination and synch details.
+    This can be created in CLI, YAML & UI.
+
+Settings:
+    Useful to manage project repositories and configuration.
     
 
     
