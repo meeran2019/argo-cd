@@ -6,7 +6,7 @@ metadata:
   creationTimestamp: "2022-12-31T04:46:33Z"
   labels:
     run: nginx
-  name: nginx2
+  name: nginx3
   namespace: default
   resourceVersion: "1488557"
   uid: cf3eba77-a7ff-4fe1-a122-9db777473e91
