@@ -149,6 +149,10 @@ Sync Strategy Types:
     It consists of manual and automatic sync.
     Auto pruning of resources - What happens when files are deleted or removed from git.
     Self heal of cluster - What argocd does when make kubectl changes directly to cluster. 
+
+Declarative Setup:
+    Can create a declarative yaml file and mention source and destination details.
+    it is executed by using kubectl apply command.
     
 
 
