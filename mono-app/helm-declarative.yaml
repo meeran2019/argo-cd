@@ -1,17 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-appln
-  namespace: argocd
+  name: demo-helm
 spec:
   destination:
     name: ''
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: ./source1
+    path: helm-chart
     repoURL: 'https://github.com/meeran2019/argo-cd.git'
     targetRevision: master
+    helm:
+      valueFiles:
+        - values.yaml
   project: default
   syncPolicy:
     automated:
