@@ -160,6 +160,19 @@ App of apps:
     In child declarative, give the source of manifest files. 
 
 Deploy Apps using HELM Chart:
+    2 ways can run the helm,
+        1. Keep helm chart in git repo. Select the repo type as "GIT".
+        2. Keep helm chart in repo like bitnami. Select the repo type as "HELM".
+
+    NOTE: Once application created, control taken over by ARGOCD and cannot find by using helm list. 
+
+
+Multi Cluster application deployment:
+    For additional external cluster, it requires to create cluster, context & credentials.
+    argocd cluster add name     -> To add cluster.
+
+    Once added, it will show in destination cluster list to choose.
+
     
 
 

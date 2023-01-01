@@ -3,4 +3,5 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o json | jq -r ".data.
 argocd app create app-name  --source --dest             -> Create an application.
 argocd app list app-name                                -> List an application.
 argocd app sync app-name                                -> Synchronize application.
-
+argocd cluster add name                                 -> To add cluster.
+argocd cluster list                                     -> TO list cluster.
