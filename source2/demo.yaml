@@ -5,7 +5,7 @@ metadata:
     kubernetes.io/psp: eks.privileged
   labels:
     run: nginx
-  name: nginx1
+  name: nginx-22
   namespace: default
 spec:
   containers:
