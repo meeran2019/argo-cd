@@ -9,7 +9,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: helm-chart
+    chart: helm-chart
     repoURL: 'https://github.com/meeran2019/argo-cd.git'
     targetRevision: master
     helm:
