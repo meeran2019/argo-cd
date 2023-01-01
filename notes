@@ -159,7 +159,8 @@ App of apps:
     In ROOT declarative, give the source of declarative files.
     In child declarative, give the source of manifest files. 
 
-
+Deploy Apps using HELM Chart:
+    
 
 
 
