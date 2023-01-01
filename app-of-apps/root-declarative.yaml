@@ -9,7 +9,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: ./app-of-apps/declarative
+    path: ./app-of-apps
     repoURL: 'https://github.com/meeran2019/argo-cd.git'
     targetRevision: master
   project: default

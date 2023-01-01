@@ -156,7 +156,12 @@ Declarative Setup:
 
 App of apps:
     From single argocd ROOT application, trigger multiple application.
-    
+    In ROOT declarative, give the source of declarative files.
+    In child declarative, give the source of manifest files. 
+
+
+
+
 
 
 
