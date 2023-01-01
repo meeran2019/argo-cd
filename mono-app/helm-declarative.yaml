@@ -11,7 +11,7 @@ spec:
   source:
     chart: helm-chart
     repoURL: 'https://github.com/meeran2019/argo-cd.git'
-    targetRevision: master
+    targetRevision: 0.1.1
     helm:
       valueFiles:
         - values.yaml
