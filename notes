@@ -110,7 +110,6 @@ Project:
     Can create multiple projects and assign to repository, application etc.
     Roles are added to projects.
 
-
 ---------------------------------------------------------------------------------------------------------
 ArgoCD Intermediate:
 ---------------------------------------------------------------------------------------------------------
@@ -166,16 +165,40 @@ Deploy Apps using HELM Chart:
 
     NOTE: Once application created, control taken over by ARGOCD and cannot find by using helm list. 
 
-
 Multi Cluster application deployment:
     For additional external cluster, it requires to create cluster, context & credentials.
     argocd cluster add name     -> To add cluster.
 
     Once added, it will show in destination cluster list to choose.
 
+---------------------------------------------------------------------------------------------------------
+ArgoCD Advanced:
+---------------------------------------------------------------------------------------------------------
+
+User Management and RBAC:
+    New user can be added in argocd-cm configmap. 
+    By default, all new user have no access.
+    By default, have 2 roles readonly and admin role.
+    Configmap argocd-rbac-cm is used to update the role.
+
+Dex Okta Connector:
+    It uses openid connect.
+    Client App (ArgoCD) -> DEX -> IdP (Okta)
+
+Bitnami Sealed Secrets:
+    As per gitops, all secrets should be declarative so it should be stored in encoded form.
+    1. Install bitnami sealed secret.
+    2. install kubeseal cli.
+    3. It helps only cluster can decrypt.
+
+Hashicorp Vault:
+    ArgoCD vault plugin is used.
+    In kubernetes secret, add annotation which is used by secret to fetch secret value.
+
+ArgoCD Metrics and Monitoring:
+    https://pete8s.medium.com/installing-prometheus-on-kubernetes-with-argocd-a4e99580543d
+
+
+ArgoCD with Jenkins:
     
-
-
-
-
 
