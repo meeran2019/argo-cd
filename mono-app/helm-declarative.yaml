@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-helm
+  name: helm-demo
   namespace: argocd
 spec:
   destination:
@@ -9,12 +9,13 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    chart: helm-chart
-    repoURL: 'https://github.com/meeran2019/argo-cd.git'
-    targetRevision: 0.1.1
+    path: helm-charts/webapp-nginx
+    repoURL: 'https://github.com/meeran2019/helm-tutorial.git'
+    targetRevision: master
     helm:
       valueFiles:
         - values.yaml
+      values: ''
   project: default
   syncPolicy:
     automated:
